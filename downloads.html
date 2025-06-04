@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
         (function(){
-            emailjs.init("مفتاحك العام هنا"); // أدخل public key هنا
+            emailjs.init("sYWP4j_nOF4pmI5ir"); // المفتاح العام
         })();
 
         function sendEmail() {
@@ -17,13 +17,14 @@
                 alert("يرجى إدخال بريد إلكتروني صحيح.");
                 return;
             }
-            emailjs.send("service_v9blolt", "معرف_القالب_الخاص_بك", {
+
+            emailjs.send("service_o7e54kz", "template_nvriseq", {
                 user_email: email
             })
             .then(function(response) {
-                alert("تم الاشتراك بنجاح!");
+                alert("✅ تم الاشتراك بنجاح! سيتم إعلامك بكل جديد.");
             }, function(error) {
-                alert("حدث خطأ، يرجى المحاولة لاحقًا.");
+                alert("❌ حدث خطأ أثناء الاشتراك، يرجى المحاولة لاحقًا.");
             });
         }
     </script>
